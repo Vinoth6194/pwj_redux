@@ -12,7 +12,7 @@ function Login() {
   return (
     <div>
       <h1>Login Component</h1>
-      <button onClick={loginToApp}>Login</button>
+      <button onClick={loginToApp}>{state.user ? "Logout" : "Login"}</button>
     </div>
   );
 }
