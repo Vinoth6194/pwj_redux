@@ -1,11 +1,20 @@
-import React from 'react'
+import React from "react";
+import { useStateValue } from "../StateProvider";
 
 function Login() {
-    return (
-        <div>
-            <h1>Login Component</h1>
-        </div>
-    )
+  const [state, dispatch] = useStateValue();
+  const loginToApp = () => {
+    dispatch({
+      type: "SET_USER",
+      user: "Vinothkumar",
+    });
+  };
+  return (
+    <div>
+      <h1>Login Component</h1>
+      <button onClick={loginToApp}>Login</button>
+    </div>
+  );
 }
 
-export default Login
+export default Login;
